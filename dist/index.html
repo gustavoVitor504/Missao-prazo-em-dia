@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Protótipo de gamificação para entregas de atividades no prazo. Dados fictícios e simulados." />
+    <title>Missão Prazo em Dia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" />
+    <script type="module" crossorigin src="./assets/index-pZ9StAaI.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BWCMFjDX.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <div>
+          <span class="tag">Protótipo · dados fictícios e simulados</span>
+          <h1>Missão Prazo em Dia</h1>
+          <p class="muted">Turma fictícia 1º A · Semana de 20 a 24/10 · 3 atividades na semana</p>
+        </div>
+        <div class="sim" role="group" aria-label="Controles da simulação">
+          <label for="day">Dia simulado</label>
+          <select id="day">
+            <option value="2">Terça</option>
+            <option value="3" selected>Quarta (ponto de controle)</option>
+            <option value="4">Quinta</option>
+            <option value="5">Sexta (prazo final)</option>
+            <option value="6">Sábado (após o prazo)</option>
+          </select>
+          <button class="ghost" id="reset" type="button">Reiniciar</button>
+        </div>
+      </header>
+
+      <nav id="nav" aria-label="Telas" hidden>
+        <button type="button" data-view="painel">Painel</button>
+        <button type="button" data-view="missao">Missão 1</button>
+        <button type="button" data-view="turma">Turma</button>
+        <button type="button" data-view="regras">Regras</button>
+        <button type="button" data-view="testes">Roteiro de testes</button>
+      </nav>
+
+      <main id="app" aria-live="polite"></main>
+
+      <p class="foot">Protótipo de estudo. Nomes, turmas e números são fictícios. As validações são simuladas no navegador e nada é salvo.</p>
+    </div>
+  </body>
+</html>
