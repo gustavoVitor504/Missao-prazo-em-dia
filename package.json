@@ -1,0 +1,17 @@
+{
+  "name": "missao-prazo-em-dia",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Protótipo navegável de gamificação para entregas de atividades no prazo (dados fictícios e simulados).",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  }
+}
