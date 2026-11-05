@@ -2,21 +2,22 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Protótipo de gamificação para entregas de atividades no prazo. Dados fictícios e simulados." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#2148a6" />
+    <meta name="description" content="Protótipo da aba Progresso: gamificação para entregas de atividades no prazo. Dados fictícios e simulados." />
     <title>Missão Prazo em Dia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" />
   </head>
   <body>
-    <div class="wrap">
-      <header class="top">
-        <div>
-          <span class="tag">Protótipo · dados fictícios e simulados</span>
-          <h1>Missão Prazo em Dia</h1>
-          <p class="muted">Turma fictícia 1º A · Semana de 20 a 24/10 · 3 atividades na semana</p>
-        </div>
+    <div class="layout">
+      <!-- No computador: painel de apresentação ao lado do celular. No celular: só a faixa de simulação no topo. -->
+      <aside class="intro">
+        <span class="kicker">Protótipo · dados fictícios</span>
+        <h1>Missão Prazo em Dia</h1>
+        <p class="lead">A aba Progresso no app do aluno. O envio continua no AVA; o app mostra o progresso e devolve o XP. Aqui os envios são simulados.</p>
+
         <div class="sim" role="group" aria-label="Controles da simulação">
           <label for="day">Dia simulado</label>
           <select id="day">
@@ -26,21 +27,37 @@
             <option value="5">Sexta (prazo final)</option>
             <option value="6">Sábado (após o prazo)</option>
           </select>
-          <button class="ghost" id="reset" type="button">Reiniciar</button>
+          <button class="sim-reset" id="reset" type="button">Reiniciar</button>
         </div>
-      </header>
 
-      <nav id="nav" aria-label="Telas" hidden>
-        <button type="button" data-view="painel">Painel</button>
-        <button type="button" data-view="missao">Missão 1</button>
-        <button type="button" data-view="turma">Turma</button>
-        <button type="button" data-view="regras">Regras</button>
-        <button type="button" data-view="testes">Roteiro de testes</button>
-      </nav>
+        <ul class="facts">
+          <li><span class="n">1</span><span><b>Missão em Etapas:</b> rascunho até quarta 23h59 (+5 XP) e entrega final até sexta 23h59 (+10 XP)</span></li>
+          <li><span class="n">2</span><span><b>Sequência semanal:</b> 3 semanas seguidas no prazo liberam 1 Carta de Escolha</span></li>
+          <li><span class="n">3</span><span><b>Meta da turma:</b> 72 de 90 entregas (80%) liberam uma recompensa votada</span></li>
+        </ul>
 
-      <main id="app" aria-live="polite"></main>
+        <div class="shortcuts" role="group" aria-label="Atalhos dos cenários de teste">
+          <span class="note">Atalhos do roteiro de testes:</span>
+          <button type="button" class="chip" data-action="cenario" data-value="3">Cenário A</button>
+          <button type="button" class="chip" data-action="cenario" data-value="5">Cenário C</button>
+          <button type="button" class="chip" data-action="cenario" data-value="6">Cenário D</button>
+        </div>
 
-      <p class="foot">Protótipo de estudo. Nomes, turmas e números são fictícios. As validações são simuladas no navegador e nada é salvo.</p>
+        <p class="note">Protótipo de estudo. Nomes, turmas e números são fictícios. As validações são simuladas no navegador e nada é salvo.</p>
+      </aside>
+
+      <div class="device">
+        <div class="phone">
+          <div class="screen">
+            <div class="sb" aria-hidden="true">
+              <span>15:32</span>
+              <span class="ic"><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span><span class="bat"></span></span>
+            </div>
+            <div id="push" class="push" role="status" hidden></div>
+            <main id="app" aria-live="polite"></main>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>

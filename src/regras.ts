@@ -1,7 +1,7 @@
 // Regras das três mecânicas. Lógica pura, sem DOM, para ficar fácil de conferir com o documento.
 
 export type Dia = 2 | 3 | 4 | 5 | 6; // terça a sábado
-export type Tela = "entrada" | "painel" | "missao" | "feedback" | "turma" | "regras" | "testes";
+export type Tela = "entrada" | "painel" | "missao" | "feedback" | "turma" | "carta" | "regras" | "testes";
 export type StatusRascunho = null | "ok" | "fora";
 export type StatusFinal = null | "pendente" | "prazo" | "atraso";
 export type TipoFeedback = "good" | "warn" | "bad";

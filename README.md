@@ -24,26 +24,13 @@ npm run dev       # abre em http://localhost:5173
 npm run build     # gera a pasta dist/ para publicar
 npm run preview   # testa a versão de produção
 ```
-
-## Publicar (deploy)
-
-**GitHub Pages:** suba o projeto para um repositório no GitHub, abra *Settings > Pages* e escolha *Source: GitHub Actions*. O arquivo `.github/workflows/deploy.yml` já faz o build e publica a cada push na branch `main`. O endereço fica parecido com `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`.
-
-**Vercel ou Netlify:** importe o repositório. As configurações são detectadas sozinhas: comando de build `npm run build` e pasta de saída `dist`.
-
-O `vite.config.ts` usa `base: "./"`, então o site funciona tanto na raiz de um domínio quanto em subpasta.
-
 ## Roteiro de testes
 
-A aba **Roteiro de testes** do protótipo tem botões que preparam cada cenário:
+O item **Roteiro de testes** do menu ☰ (e os atalhos ao lado do celular, no computador) tem botões que preparam cada cenário:
 
 - **A. Conclusão bem-sucedida:** rascunho na quarta e entrega completa na sexta. Esperado: 105 → 120 XP, missão 100%, sequência 3 semanas, Carta de Escolha e turma 72/90.
 - **B. Ação repetida:** reenviar a entrega já validada. Esperado: nenhuma mudança de XP nem da turma.
 - **C. Critério não atendido:** entregar com 2 itens do checklist. Esperado: XP pendente até completar.
 - **D. Interrupção:** entregar no sábado. Esperado: 0 XP, XP anterior mantido e opção de usar o Passe.
-
-## Créditos
-
-Fontes [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) e [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible), do Google Fonts (SIL Open Font License).
 
 Autores: [Gustavo Vitor Ferreira , Júlio César Nunes , Thalles Silveira]
